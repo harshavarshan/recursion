@@ -1,0 +1,12 @@
+<script>
+	let arr = [];
+
+function between(x,y){
+if(x < y-1){
+arr.push(x+1);
+between(x+1,y);
+};
+return(arr);
+};
+console.log(between(2,10));
+</script>

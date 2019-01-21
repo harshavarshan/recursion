@@ -1,0 +1,16 @@
+<script>
+	function bin(arr, n) {
+    const mid = Math.floor(arr.length / 2);
+    if (arr[arr.length - 1] < n || !arr[mid]) return null;
+
+    if (arr[mid] > n) {
+        return bin(arr.slice(0, mid), n);
+    } else if (arr[mid] < n) {
+        return bin(arr.slice(mid), n);
+    } else {
+        return arr[mid];
+    }
+}
+const arr = [2, 4, 6, 8, 16, 32, 44];
+console.log(bin(arr, 2));
+</script>

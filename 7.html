@@ -1,0 +1,10 @@
+<script>
+	function isEven(x) {
+  x = Math.abs(x) 
+  if (x == 2 || x == 0 ) { return true }
+  if (x < 2) { return false }
+  return isEven(x-2)
+}
+
+console.log(isEven(5));
+</script>

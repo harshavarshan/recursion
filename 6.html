@@ -1,0 +1,11 @@
+<script>
+	const fibo = length => {
+    if (length == 1)
+        return [0]
+    let arr = fibo(length - 1)
+    arr.push(arr[arr.length - 1] + arr[arr.length - 2] || 1)
+    return arr
+}
+
+console.log(fibo(8))
+</script>

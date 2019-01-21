@@ -1,0 +1,14 @@
+<script>
+	function sort(arr, sorted = []) {
+  
+    const minValue = Math.min(...arr);
+    const minValueInx = arr.findIndex(el => el === minValue);
+
+    sorted.push(arr[minValueInx]);
+    arr.splice(minValueInx, 1);
+
+    return arr.length ? sort(arr, sorted) : sorted;
+}
+const arr = [22, 1, 4, 31, 9, 15, 62, 40, 111, 5, 10];
+console.log(sort(arr));
+</script>
